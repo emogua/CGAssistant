@@ -5,6 +5,7 @@
 #include <QThread>
 #include <QStandardItemModel>
 #include "player.h"
+#include "battle.h"
 
 namespace Ui {
 class PlayerForm;
@@ -15,7 +16,7 @@ class PlayerForm : public QWidget
     Q_OBJECT
 
 public:
-    explicit PlayerForm(CPlayerWorker *worker, QWidget *parent = 0);
+    explicit PlayerForm(CPlayerWorker *worker,CBattleWorker *bworker, QWidget *parent = 0);
     ~PlayerForm();
 private:
     void ClearPlayerInfo();
@@ -26,22 +27,25 @@ private slots:
     void OnSetWorkDelay(int value);
     void OnSetWorkAcc(int value);
     void on_pushButton_save_clicked();
-
     void on_pushButton_load_clicked();
     bool ParsePlayerSettings(const QJsonValue &val);
     bool ParseSettings(const QByteArray &data, QJsonDocument &doc);
     void SaveSettings(QByteArray &data);
+
 public slots:
     void OnCloseWindow();
     void OnNotifyGetInfoFailed(bool bIsConnected, bool bIsInGame);
     void OnNotifyGetPlayerInfo(QSharedPointer<CGA_PlayerInfo_t> player);
     void OnNotifyGetPetsInfo(QSharedPointer<CGA_PetList_t> pets);
     void OnNotifyGetSkillsInfo(QSharedPointer<CGA_SkillList_t> pets);
-    void OnNotifyGetMapInfo(QString name, int x, int y, int worldStatus, int gameStatus);
+    void OnNotifyGetMapInfo(QString name, int index1, int index2, int index3, int x, int y, int worldStatus, int gameStatus);
+    void OnNotifyFillLoadSettings(QString path);
 signals:
     bool ParseItemIdMap(const QJsonValue &val);
     bool ParseItemDropper(const QJsonValue &val);
+    bool ParseItemTweaker(const QJsonValue &val);
     bool ParseBattleSettings(const QJsonValue &val);
+    void SaveItemTweaker(QJsonArray &arr);
     void SaveItemDropper(QJsonArray &arr);
     void SaveItemIdMap(QJsonObject &obj);
     void SaveBattleSettings(QJsonObject &obj);

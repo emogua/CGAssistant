@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets webenginewidgets
+QT       += core gui widgets
 
 TARGET = CGAssistant
 TEMPLATE = app
@@ -17,7 +17,6 @@ TRANSLATIONS+=lang.ts
 SOURCES += main.cpp\
         mainwindow.cpp \
     scriptform.cpp \
-    mywebview.cpp \
     playerform.cpp \
     processform.cpp \
     processtable.cpp \
@@ -28,11 +27,14 @@ SOURCES += main.cpp\
     itemform.cpp \
     battlesetting.cpp \
     itemdropper.cpp \
-    mylistview.cpp
+    mylistview.cpp \
+    itemtweaker.cpp \
+    mapform.cpp \
+    mypaintmap.cpp \
+    accountform.cpp
 
 HEADERS  += mainwindow.h \
     scriptform.h \
-    mywebview.h \
     playerform.h \
     processform.h \
     processtable.h \
@@ -43,14 +45,20 @@ HEADERS  += mainwindow.h \
     itemform.h \
     itemdropper.h \
     battlesetting.h \
-    mylistview.h
+    mylistview.h \
+    itemtweaker.h \
+    mapform.h \
+    mypaintmap.h \
+    accountform.h
 
 FORMS    += mainwindow.ui \
     scriptform.ui \
     playerform.ui \
     processform.ui \
     autobattleform.ui \
-    itemform.ui
+    itemform.ui \
+    mapform.ui \
+    accountform.ui
 
 RC_FILE += CGAssistant.rc
 
@@ -65,8 +73,8 @@ RESOURCES += \
 QMAKE_CXXFLAGS += /MP /Gm-
 QMAKE_CFLAGS += /MP /Gm-
 
-Release:LIBS += -L"../Release/" -lCGALib
-Debug:LIBS += -L"../Debug/" -lCGALib
+Release:LIBS += -L"../Release/" -lCGALib -lntdll
+Debug:LIBS += -L"../Debug/" -lCGALib -lntdll
 LIBS += -L"../boost_1_63_0/stage/lib"
 LIBS += -luser32
 LIBS += -lgdi32

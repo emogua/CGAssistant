@@ -2,6 +2,93 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
+    <name>AccountForm</name>
+    <message>
+        <source>Form</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>GID</source>
+        <translation>子账号</translation>
+    </message>
+    <message>
+        <source>Game Type</source>
+        <translation>游戏类型</translation>
+    </message>
+    <message>
+        <source>Server</source>
+        <translation>线</translation>
+    </message>
+    <message>
+        <source>Login Game</source>
+        <translation>登录游戏</translation>
+    </message>
+    <message>
+        <source>Character</source>
+        <translation>人物</translation>
+    </message>
+    <message>
+        <source>Get GID List</source>
+        <translation>获取子账号列表</translation>
+    </message>
+    <message>
+        <source>Auto Login</source>
+        <translation>自动登录</translation>
+    </message>
+    <message>
+        <source>Big Server</source>
+        <translation>服务器</translation>
+    </message>
+    <message>
+        <source>Account</source>
+        <translation>通行证</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation>密码</translation>
+    </message>
+    <message>
+        <source>Not Ready</source>
+        <translation>准备就绪</translation>
+    </message>
+    <message>
+        <source>POLCN_Launcher running with pid %1...</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Get GID ok.
+</source>
+        <translation>获取子账号成功。</translation>
+    </message>
+    <message>
+        <source>Login refused by server.
+</source>
+        <translation>登录被服务器拒绝。</translation>
+    </message>
+    <message>
+        <source>Fail to parse POLCN_Launcher output, missing &quot;result&quot;.
+</source>
+        <translation>解析登录器返回结果失败，缺少result字段。</translation>
+    </message>
+    <message>
+        <source>Fail to parse POLCN_Launcher output.
+</source>
+        <translation>解析登录器返回结果失败。</translation>
+    </message>
+    <message>
+        <source>POLCN_Launcher finished with exitCode %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Querying GID list...</source>
+        <translation>正在请求子账号列表...</translation>
+    </message>
+    <message>
+        <source>Disable POLCN Updater</source>
+        <translation type="unfinished">禁用登录器更新</translation>
+    </message>
+</context>
+<context>
     <name>AutoBattleForm</name>
     <message>
         <source>Form</source>
@@ -35,11 +122,11 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Load</source>
-        <translation>加载</translation>
+        <translation type="vanished">加载</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>保存</translation>
+        <translation type="vanished">保存</translation>
     </message>
     <message>
         <source>font-weight:bold; font-size:14px;</source>
@@ -159,7 +246,7 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Defense</source>
-        <translation>防御</translation>
+        <translation type="vanished">防御</translation>
     </message>
     <message>
         <source>Escape</source>
@@ -219,7 +306,7 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Boomerang</source>
-        <translation>回力标</translation>
+        <translation>回力标 (人多的一排)</translation>
     </message>
     <message>
         <source>from %1</source>
@@ -251,11 +338,153 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Pet with highest lv</source>
-        <translation>等级最高</translation>
+        <translation>等级最高的宠物</translation>
     </message>
     <message>
         <source>Pet with highest hp</source>
-        <translation>血量最多</translation>
+        <translation>血量最多的宠物</translation>
+    </message>
+    <message>
+        <source>Low HP Percentage</source>
+        <translation>低血量比例</translation>
+    </message>
+    <message>
+        <source>High HP Percentage</source>
+        <translation>高血量比例</translation>
+    </message>
+    <message>
+        <source>Lv Max</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>LogBack</source>
+        <translation>登出</translation>
+    </message>
+    <message>
+        <source>Round</source>
+        <translation>回合</translation>
+    </message>
+    <message>
+        <source>Double Action</source>
+        <translation>二动</translation>
+    </message>
+    <message>
+        <source>Teammate Debuff</source>
+        <translation>队友异常状态</translation>
+    </message>
+    <message>
+        <source>Single Debuff</source>
+        <translation>单体异常状态</translation>
+    </message>
+    <message>
+        <source>Multi Debuff</source>
+        <translation>T字形异常状态</translation>
+    </message>
+    <message>
+        <source>Sleep</source>
+        <translation>昏睡</translation>
+    </message>
+    <message>
+        <source>Medusa</source>
+        <translation>石化</translation>
+    </message>
+    <message>
+        <source>Drunk</source>
+        <translation>醉酒</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation>混乱</translation>
+    </message>
+    <message>
+        <source>Forget</source>
+        <translation>遗忘</translation>
+    </message>
+    <message>
+        <source>Any</source>
+        <translation>任意</translation>
+    </message>
+    <message>
+        <source>Enemy MultiTarget HP</source>
+        <translation>敌人T字形血量</translation>
+    </message>
+    <message>
+        <source>Multi Magic</source>
+        <translation>强力魔法</translation>
+    </message>
+    <message>
+        <source>Poison</source>
+        <translation>中毒</translation>
+    </message>
+    <message>
+        <source>Condition</source>
+        <translation>条件</translation>
+    </message>
+    <message>
+        <source>AND IF</source>
+        <translation>并且 如果</translation>
+    </message>
+    <message>
+        <source>Teammate MultiTarget HP</source>
+        <translation>队友T字形血量</translation>
+    </message>
+    <message>
+        <source>Teammate All HP</source>
+        <translation>队友全体血量</translation>
+    </message>
+    <message>
+        <source>Enemy SingleRow Count</source>
+        <translation>敌人一排人数</translation>
+    </message>
+    <message>
+        <source>Enemy All HP</source>
+        <translation>敌人全体血量</translation>
+    </message>
+    <message>
+        <source>Enemy Level</source>
+        <translation>敌人等级</translation>
+    </message>
+    <message>
+        <source>Enemy Average Level</source>
+        <translation>敌人平均等级</translation>
+    </message>
+    <message>
+        <source>Less Unit Row</source>
+        <translation>人少的一排</translation>
+    </message>
+    <message>
+        <source>Teammate MP</source>
+        <translation>队友蓝量</translation>
+    </message>
+    <message>
+        <source>Guard</source>
+        <translation>防御</translation>
+    </message>
+    <message>
+        <source>Rebirth</source>
+        <translation>精灵变身</translation>
+    </message>
+    <message>
+        <source>Do Nothing</source>
+        <translation>什么都不做</translation>
+    </message>
+    <message>
+        <source>Pet Double
+Action</source>
+        <translation>宠物二动</translation>
+    </message>
+    <message>
+        <source>TO2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PET2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Player Force
+Action</source>
+        <translation>人物强制行动</translation>
     </message>
 </context>
 <context>
@@ -279,6 +508,10 @@ meet Lv1 enemy</source>
     <message>
         <source>Pet Target</source>
         <translation>宠物目标</translation>
+    </message>
+    <message>
+        <source>Condition2</source>
+        <translation>条件2</translation>
     </message>
 </context>
 <context>
@@ -316,15 +549,15 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Timeout for reading shared data.</source>
-        <translation type="unfinished"></translation>
+        <translation>读取共享内存失败。</translation>
     </message>
     <message>
         <source>Could not connect to local RPC server.</source>
-        <translation type="unfinished"></translation>
+        <translation>无法连接到本地RPC服务。</translation>
     </message>
     <message>
         <source>Game already attached by other instance of CGAssistant.</source>
-        <translation>游戏已经被另一个CGAssistant附加</translation>
+        <translation>游戏已经被另一个CGAssistant附加。</translation>
     </message>
 </context>
 <context>
@@ -339,11 +572,11 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Save</source>
-        <translation>保存</translation>
+        <translation type="vanished">保存</translation>
     </message>
     <message>
         <source>Load</source>
-        <translation>加载</translation>
+        <translation type="vanished">加载</translation>
     </message>
     <message>
         <source>Items</source>
@@ -367,7 +600,7 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Error</source>
-        <translation>错误</translation>
+        <translation type="vanished">错误</translation>
     </message>
     <message>
         <source>Failed to load setting file.</source>
@@ -383,27 +616,35 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Load item settings</source>
-        <translation>加载物品设置</translation>
+        <translation type="vanished">加载物品设置</translation>
     </message>
     <message>
         <source>json files(*.json)</source>
-        <translation>json文件(*.json)</translation>
+        <translation type="vanished">json文件(*.json)</translation>
     </message>
     <message>
         <source>Failed to load item settings from file.</source>
-        <translation>读取物品设置失败。</translation>
+        <translation type="vanished">读取物品设置失败。</translation>
     </message>
     <message>
         <source>Failed to load item settings with invalid format.</source>
-        <translation>读取物品设置失败，格式不正确。</translation>
+        <translation type="vanished">读取物品设置失败，格式不正确。</translation>
     </message>
     <message>
         <source>Save item settings</source>
-        <translation>保存物品设置</translation>
+        <translation type="vanished">保存物品设置</translation>
     </message>
     <message>
         <source>Failed to save item settings to file.</source>
-        <translation>保存物品设置失败。</translation>
+        <translation type="vanished">保存物品设置失败。</translation>
+    </message>
+    <message>
+        <source>Auto Tweak</source>
+        <translation>自动堆叠</translation>
+    </message>
+    <message>
+        <source>Add to auto-tweak...</source>
+        <translation>添加到自动堆叠...</translation>
     </message>
 </context>
 <context>
@@ -435,6 +676,55 @@ meet Lv1 enemy</source>
     <message>
         <source>Script</source>
         <translation>脚本</translation>
+    </message>
+    <message>
+        <source>Map</source>
+        <translation>地图</translation>
+    </message>
+    <message>
+        <source>Account</source>
+        <translation>账号</translation>
+    </message>
+    <message>
+        <source>CGAssistant %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;SimSun&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;唯一Q群 300303705&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2019-12-20&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;修复刷十年戒指脚本的问题。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2019-12-14&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;快捷键F4取出所有物品修复会卡物品栏的问题。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;采集和双百脚本的配置格式有修改，之前的老配置文件需要手动删除后重新生成。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;修复某些练级脚本无限回补的问题。&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;采集插件增加狩猎。&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;2019-12-01&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;游戏内增加快捷键：&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;F1登出回城 F2登出服务器 F3穿墙(向鼠标指向方向) F4交易时一键取出所有物品&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MapForm</name>
+    <message>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Crosshair</source>
+        <translation>显示十字准星</translation>
+    </message>
+    <message>
+        <source>Download Map</source>
+        <translation>下载地图</translation>
     </message>
 </context>
 <context>
@@ -535,6 +825,51 @@ meet Lv1 enemy</source>
         <source>Move speed</source>
         <translation>移动速度</translation>
     </message>
+    <message>
+        <source>Clock</source>
+        <translation>卡时</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>保存</translation>
+    </message>
+    <message>
+        <source>Load</source>
+        <translation>加载</translation>
+    </message>
+    <message>
+        <source>json files(*.json)</source>
+        <translation>json文件(*.json)</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>错误</translation>
+    </message>
+    <message>
+        <source>Failed to save settings file.
+error: %1</source>
+        <translation>保存配置文件失败，错误: %1</translation>
+    </message>
+    <message>
+        <source>Load player settings</source>
+        <translation>加载玩家配置</translation>
+    </message>
+    <message>
+        <source>Failed to load item settings from file.</source>
+        <translation>读取物品设置失败。</translation>
+    </message>
+    <message>
+        <source>Failed to load item settings with invalid format.</source>
+        <translation>读取物品设置失败，格式不正确。</translation>
+    </message>
+    <message>
+        <source>SwitchAnim off</source>
+        <translation>屏蔽切图</translation>
+    </message>
+    <message>
+        <source>Save player settings</source>
+        <translation>保存玩家配置</translation>
+    </message>
 </context>
 <context>
     <name>ProcessForm</name>
@@ -558,6 +893,10 @@ meet Lv1 enemy</source>
         <source>Failed to attach to process.
 %1</source>
         <translation>附加进程失败. %1</translation>
+    </message>
+    <message>
+        <source>Syncronize Window</source>
+        <translation>窗口同步</translation>
     </message>
 </context>
 <context>
@@ -596,7 +935,7 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Defense</source>
-        <translation>防御</translation>
+        <translation type="vanished">防御</translation>
     </message>
     <message>
         <source>Escape</source>
@@ -634,6 +973,166 @@ meet Lv1 enemy</source>
         <source>Call pet with highest health</source>
         <translation>放出最高血量的宠物</translation>
     </message>
+    <message>
+        <source>LogBack</source>
+        <translation>登出</translation>
+    </message>
+    <message>
+        <source>Round %1%2</source>
+        <translation>回合数 %1%2</translation>
+    </message>
+    <message>
+        <source>DoubleAction</source>
+        <translation>二动</translation>
+    </message>
+    <message>
+        <source>Any</source>
+        <translation>任意</translation>
+    </message>
+    <message>
+        <source>Sleep</source>
+        <translation>昏睡</translation>
+    </message>
+    <message>
+        <source>Medusa</source>
+        <translation>石化</translation>
+    </message>
+    <message>
+        <source>Drunk</source>
+        <translation>醉酒</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation>混乱</translation>
+    </message>
+    <message>
+        <source>Forget</source>
+        <translation>遗忘</translation>
+    </message>
+    <message>
+        <source>Teammate Debuff %1 %2</source>
+        <translation>队友异常状态 %1 %2</translation>
+    </message>
+    <message>
+        <source>Enemy MultiTarget Hp %1%2</source>
+        <translation type="vanished">敌方T字形累加血量 %1%2</translation>
+    </message>
+    <message>
+        <source>Poison</source>
+        <translation>中毒</translation>
+    </message>
+    <message>
+        <source>HP: %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP: %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>XP: %1 / %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upgrade: %1</source>
+        <translation>升级经验: %1</translation>
+    </message>
+    <message>
+        <source>Loyalty: %1</source>
+        <translation type="vanished">忠诚: %1</translation>
+    </message>
+    <message>
+        <source>Ignore</source>
+        <translation>忽略</translation>
+    </message>
+    <message>
+        <source>Enemy SingleRow Count %1%2</source>
+        <translation>敌人一排数量 %1%2</translation>
+    </message>
+    <message>
+        <source>Enemy MultiTarget HP %1%2</source>
+        <translation>敌人T字形血量 %1%2</translation>
+    </message>
+    <message>
+        <source>Teammate MultiTarget HP %1%2</source>
+        <translation>队友T字形血量 %1%2</translation>
+    </message>
+    <message>
+        <source>Enemy All HP %1%2</source>
+        <translation>敌人全体血量 %1%2</translation>
+    </message>
+    <message>
+        <source>Teammate All HP %1%2</source>
+        <translation>队友全体血量 %1%2</translation>
+    </message>
+    <message>
+        <source>Enemy Level %1%2</source>
+        <translation>敌人等级 %1%2</translation>
+    </message>
+    <message>
+        <source>Enemy Average Level %1%2</source>
+        <translation>敌人平均等级 %1%2</translation>
+    </message>
+    <message>
+        <source>TeammateMP %1%2</source>
+        <translation>队友蓝量 %1%2</translation>
+    </message>
+    <message>
+        <source>cg_item_6000</source>
+        <translation type="vanished">cg_item_6000 (道具)</translation>
+    </message>
+    <message>
+        <source>cg_se_6000</source>
+        <translation>cg_se_6000 (时长)</translation>
+    </message>
+    <message>
+        <source>cg_se_3000</source>
+        <translation>cg_se_3000 (怀旧)</translation>
+    </message>
+    <message>
+        <source>Aries</source>
+        <translation>牧羊</translation>
+    </message>
+    <message>
+        <source>Gemini</source>
+        <translation>金牛</translation>
+    </message>
+    <message>
+        <source>#%1</source>
+        <translation>%1线</translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation>左边人物</translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation>右边人物</translation>
+    </message>
+    <message>
+        <source>Loyality: %1</source>
+        <translation>忠诚: %1</translation>
+    </message>
+    <message>
+        <source>Guard</source>
+        <translation>防御</translation>
+    </message>
+    <message>
+        <source>Rebirth</source>
+        <translation>精灵变身</translation>
+    </message>
+    <message>
+        <source>Do Nothing</source>
+        <translation>什么都不做</translation>
+    </message>
+    <message>
+        <source>cg_item_6000 (HN)</source>
+        <translation>道具 (电信)</translation>
+    </message>
+    <message>
+        <source>cg_item_6000 (WT)</source>
+        <translation>道具 (网通)</translation>
+    </message>
 </context>
 <context>
     <name>ScriptForm</name>
@@ -659,7 +1158,7 @@ meet Lv1 enemy</source>
     </message>
     <message>
         <source>Debugger</source>
-        <translation>调试器</translation>
+        <translation type="vanished">调试器</translation>
     </message>
     <message>
         <source>Debugging with pid %2...</source>
@@ -705,6 +1204,26 @@ error: %1</source>
     <message>
         <source>Debugging with pid %1...</source>
         <translation>正在调试进程 %1 ...</translation>
+    </message>
+    <message>
+        <source>Console / Debugger</source>
+        <translation>控制台 / 调试器</translation>
+    </message>
+    <message>
+        <source>Auto Restart</source>
+        <translation>自动重启脚本</translation>
+    </message>
+    <message>
+        <source>Starting node in debug mode...</source>
+        <translation>以调试模式开启node进程...</translation>
+    </message>
+    <message>
+        <source>Injury Protect</source>
+        <translation>受伤停止脚本</translation>
+    </message>
+    <message>
+        <source>Soul Protect</source>
+        <translation>掉魂停止脚本</translation>
     </message>
 </context>
 </TS>

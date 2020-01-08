@@ -5,11 +5,16 @@ using namespace v8;
 
 extern CGA::CGAInterface *g_CGAInterface;
 
+void BattleActionNotify(int flags);
+void TradeStateNotify(int state);
+void TradeDialogNotify(CGA::cga_trade_dialog_t info);
+void TradeStuffsNotify(CGA::cga_trade_stuff_info_t info);
 void PlayerMenuNotify(CGA::cga_player_menu_items_t players);
 void UnitMenuNotify(CGA::cga_unit_menu_items_t units);
 void NPCDialogNotify(CGA::cga_npc_dialog_t dlg);
 void WorkingResultNotify(CGA::cga_working_result_t results);
 void ChatMsgNotify(CGA::cga_chat_msg_t msg);
+void DownloadMapNotify(CGA::cga_download_map_t msg);
 
 class ConnectWorkerData
 {
@@ -34,11 +39,16 @@ void ConnectWorker(uv_work_t* req)
 
 	if (data->m_result)
 	{
+		g_CGAInterface->RegisterBattleActionNotify(std::bind(&BattleActionNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterTradeStateNotify(std::bind(&TradeStateNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterTradeDialogNotify(std::bind(&TradeDialogNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterTradeStuffsNotify(std::bind(&TradeStuffsNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterPlayerMenuNotify(std::bind(&PlayerMenuNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterUnitMenuNotify(std::bind(&UnitMenuNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterNPCDialogNotify(std::bind(&NPCDialogNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterWorkingResultNotify(std::bind(&WorkingResultNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterChatMsgNotify(std::bind(&ChatMsgNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterDownloadMapNotify(std::bind(&DownloadMapNotify, std::placeholders::_1));
 	}
 }
 
@@ -49,8 +59,9 @@ void ConnectAfterWorker(uv_work_t* req, int status)
 
 	auto data = (ConnectWorkerData *)req->data;
 
+	Local<Value> nullValue = Nan::Null();
 	Handle<Value> argv[1];
-	argv[0] = Boolean::New(isolate, data->m_result);
+	argv[0] = data->m_result ? nullValue : Nan::TypeError("Unknown exception.");
 
 	Local<Function>::New(isolate, data->m_callback)->Call(isolate->GetCurrentContext()->Global(), 1, argv);
 	data->m_callback.Reset();
@@ -102,11 +113,16 @@ void Connect(const Nan::FunctionCallbackInfo<v8::Value>& info)
 	auto bResult = g_CGAInterface->Connect(port);
 	if (bResult)
 	{
+		g_CGAInterface->RegisterBattleActionNotify(std::bind(&BattleActionNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterTradeStateNotify(std::bind(&TradeStateNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterTradeDialogNotify(std::bind(&TradeDialogNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterTradeStuffsNotify(std::bind(&TradeStuffsNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterPlayerMenuNotify(std::bind(&PlayerMenuNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterUnitMenuNotify(std::bind(&UnitMenuNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterNPCDialogNotify(std::bind(&NPCDialogNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterWorkingResultNotify(std::bind(&WorkingResultNotify, std::placeholders::_1));
 		g_CGAInterface->RegisterChatMsgNotify(std::bind(&ChatMsgNotify, std::placeholders::_1));
+		g_CGAInterface->RegisterDownloadMapNotify(std::bind(&DownloadMapNotify, std::placeholders::_1));
 	}
 	info.GetReturnValue().Set(bResult);
 }

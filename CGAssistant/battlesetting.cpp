@@ -4,10 +4,13 @@
 CBattleSettingModel::CBattleSettingModel(QObject *parent) : QAbstractTableModel(parent)
 {
     m_HeaderString.append(tr("Condition"));
+    m_HeaderString.append(tr("Condition2"));
     m_HeaderString.append(tr("Player Action"));
     m_HeaderString.append(tr("Player Target"));
     m_HeaderString.append(tr("Pet Action"));
     m_HeaderString.append(tr("Pet Target"));
+    //m_HeaderString.append(tr("Pet Action 2"));
+    //m_HeaderString.append(tr("Pet Target 2"));
 }
 
 bool CBattleSettingModel::swapRow(int position, int destination)
@@ -132,27 +135,45 @@ QVariant CBattleSettingModel::data(const QModelIndex &index, int role) const
             case 1:
             {
                 QString str;
-                item->GetPlayerActionName(str);
+                item->GetCondition2Name(str);
                 return str;
             }
             case 2:
             {
                 QString str;
-                item->GetPlayerTargetName(str);
+                item->GetPlayerActionName(str);
                 return str;
             }
             case 3:
             {
                 QString str;
-                item->GetPetActionName(str);
+                item->GetPlayerTargetName(str);
                 return str;
             }
             case 4:
             {
                 QString str;
+                item->GetPetActionName(str);
+                return str;
+            }
+            case 5:
+            {
+                QString str;
                 item->GetPetTargetName(str);
                 return str;
             }
+           /* case 6:
+            {
+                QString str;
+                item->GetPetAction2Name(str);
+                return str;
+            }
+            case 7:
+            {
+                QString str;
+                item->GetPetTarget2Name(str);
+                return str;
+            }*/
             }
         }
         else if (role == Qt::DecorationRole)

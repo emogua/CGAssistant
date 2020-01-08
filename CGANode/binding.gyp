@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "node_cga",
-      "sources": [ "main.cc", "connect.cc", "item.cc", "info.cc", "map.cc", "npc.cc", "work.cc", "chat.cc" ],
+      "sources": [ "main.cc", "connect.cc", "item.cc", "info.cc", "map.cc", "npc.cc", "work.cc", "chat.cc", "battle.cc"  ],
       "include_dirs": [
         "<!(node -e \"require('nan')\")",
 		"../",

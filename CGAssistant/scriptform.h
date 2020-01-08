@@ -8,7 +8,6 @@ namespace Ui {
 class ScriptForm;
 }
 class QTextEdit;
-class MyWebView;
 
 class ScriptForm : public QWidget
 {
@@ -19,29 +18,30 @@ public:
 
 public slots:
     void OnNotifyAttachProcessOk(quint32 ProcessId, quint32 port, quint32 hWnd);
-
-private slots:
     void on_pushButton_load_clicked();
     void on_pushButton_run_clicked();
     void on_pushButton_debug_clicked();
+    void on_pushButton_kill_clicked();
+    void OnNotifyFillLoadScript(QString path, bool autorestart, bool injuryprot, bool soulprot);
+
+private slots:
     void OnNodeStarted();
     void OnNodeStartError(QProcess::ProcessError error);
     void OnNodeReadyReadStdOut();
     void OnNodeReadyReadStdErr();
     void OnNodeFinish(int exitCode, QProcess::ExitStatus exitStatus);
     void OnCloseWindow();
-    void on_pushButton_kill_clicked();
-
+    void OnAutoRestart();
 private:
     Ui::ScriptForm *ui;
-    MyWebView *m_webview;
     QTextEdit *m_output;
     QString m_scriptPath;
+    QString m_chromePath;
     QProcess *m_node;
 
     bool m_bListening;
     bool m_bDebugging;
-    int m_port;
+    quint32 m_port;
 };
 
 #endif // SCRIPTFORM_H
